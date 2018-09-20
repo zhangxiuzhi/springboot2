@@ -1,0 +1,13 @@
+server:
+  port: 9090
+spring:
+  kafka:
+    bootstrap-servers: 47.101.41.34:8080
+    consumer:
+      group-id: group1
+      auto-offset-reset: earliest
+    client-id: client1
+#debug: true
+#logging:
+#  level:
+#    org.apache.kafka: debug

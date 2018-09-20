@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: port-server
+  cloud:
+    config:
+      uri: http://127.0.0.1:8888
+      username: user
+      password: config
+  sleuth:
+    sampler:
+      probability: 1
+  zipkin:
+    sender:
+      type: kafka
+  kafka:
+    client-id: client1
+    bootstrap-servers: 47.101.41.34:8080
+debug: true
+logging:
+  level:
+    org.springframework.cloud: debug

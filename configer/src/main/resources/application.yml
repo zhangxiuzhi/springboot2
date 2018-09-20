@@ -1,0 +1,26 @@
+server:
+  port: 8888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:eureka@127.0.0.1:8761/eureka
+  instance:
+    ip-address: 127.0.0.1
+    prefer-ip-address: true
+    metadata-map:
+      user.name: user
+      user.password: config
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+spring:
+  security:
+    user:
+      name: user
+      password: config
+      roles: ENDPOINT_ADMIN
