@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+
+</head>
+<body>
+
+<div th:fragment="sidebar" class="sidebar" >
+
+    <script language="JavaScript">
+
+        var _userName="[[${_loginName}]]";
+        // var _userName="Wangzhenjia";
+
+    </script>
+    <div  id="component-sidebar">
+
+    </div>
+    <script th:src="@{/js/module/app.sidebar.js}"></script>
+</div>
+
+
+</body>
+</html>

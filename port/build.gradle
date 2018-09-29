@@ -41,7 +41,8 @@ dependencies {
 //    compile('org.springframework.cloud:spring-cloud-starter-sleuth')
     compile('org.springframework.cloud:spring-cloud-starter-zipkin')
     compile('org.springframework.kafka:spring-kafka')
-    compile('org.springframework.amqp:spring-kafka"')
+//    compile('org.springframework.amqp:spring-kafka"')
+    compile('com.alicp.jetcache:jetcache-starter-redis:2.5.7')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 

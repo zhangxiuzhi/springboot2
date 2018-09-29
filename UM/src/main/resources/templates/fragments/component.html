@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<!--
+    品名规格材质通用组件
+    参数：{
+        layout: 布局方式     {
+           inline:用于搜索,
+           horizontal：用于表单
+        }
+        goodsName：品名name,
+        specRatio： 规格name
+        material：材质name,
+         goodsNameValue：品名value,
+        specRatioValue： 规格value
+        materialValue：材质value
+    }
+-->
+<div class="component-grm" th:fragment="grm (layout)">
+    <!--水平布局-->
+    <!--品名-->
+    <div th:if="${layout} == inline" class="form-group">
+        <label class="control-label">品名</label>
+        <div class="input-group">
+            <input type="hidden" name="goodsNameId" class="input-default" id="comp-grm-goodsName-id"/>
+            <input type="text" name="com_goodsName" th:name="${goodsName}" th:value="${goodsNameValue}" class="input-default" id="comp-grm-goodsName-text"/>
+            <span class="input-group-addon"><a href="javascript:void(0)" onclick="component_grm.show_componentGoodsName()"><i class="far fa-search"></i></a></span>
+        </div>
+    </div>
+    <!--规格-->
+    <div th:if="${layout} == inline" class="form-group">
+        <label class="control-label">规格</label>
+        <div class="input-group">
+            <input type="hidden" name="specRatioId" class="input-default" id="comp-grm-specRatio-id"/>
+            <input type="text" name="com_specRatio" th:name="${specRatio}" th:value="${specRatioValue}" class="input-default" id="comp-grm-specRatio-text" />
+            <span class="input-group-addon"><a href="javascript:void(0)" onclick="component_grm.show_componentSpecRatio()"><i class="far fa-search"></i></a></span>
+        </div>
+    </div>
+    <!--材质-->
+    <div th:if="${layout} == inline" class="form-group">
+        <label class="control-label">材质</label>
+        <div class="input-group">
+            <input type="hidden" name="materialId" class="input-default" id="comp-grm-material-id"/>
+            <input type="text" name="com_material" th:name="${material}" th:value="${materialValue}" class="input-default" id="comp-grm-material-text" />
+            <span class="input-group-addon"><a href="javascript:void(0)" onclick="component_grm.show_componentMaterial()"><i class="far fa-search"></i></a></span>
+        </div>
+    </div>
+
+    <!--栅格布局-->
+    <div th:if="${layout} == horizontal" class="form-group">
+        <!--品名-->
+        <label class="col-sm-1 control-label">品名<i class="text-danger">*</i></label>
+        <div class="col-sm-2">
+            <div class="input-group">
+                <input type="hidden" class="input-default form-control" id="comp-grm-goodsName-id"/>
+                <input type="text" th:name="${goodsName}" th:value="${goodsNameValue}" class="input-default form-control" id="comp-grm-goodsName-text" data-validetta="required"/>
+                <span class="input-group-addon"><a href="javascript:void(0)" onclick="component_grm.show_componentGoodsName()"><i class="far fa-search"></i></a></span>
+            </div>
+        </div>
+        <!--规格-->
+        <label class="col-sm-1 control-label">规格<i class="text-danger">*</i></label>
+        <div class="col-sm-2">
+            <div class="input-group">
+                <input type="hidden" class="input-default form-control" id="comp-grm-specRatio-id"/>
+                <input type="text" th:name="${specRatio}" th:value="${specRatioValue}" class="input-default form-control" id="comp-grm-specRatio-text" data-validetta="required"/>
+                <span class="input-group-addon"><a href="javascript:void(0)" onclick="component_grm.show_componentSpecRatio()"><i class="far fa-search"></i></a></span>
+            </div>
+        </div>
+        <!--材质-->
+        <label class="col-sm-1 control-label">材质</label>
+        <div class="col-sm-2">
+            <div class="input-group">
+                <input type="hidden" class="input-default form-control" id="comp-grm-material-id"/>
+                <input type="text" th:name="${material}" th:value="${materialValue}" class="input-default form-control" id="comp-grm-material-text"/>
+                <span class="input-group-addon"><a href="javascript:void(0)" onclick="component_grm.show_componentMaterial()"><i class="far fa-search"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--js-->
+    <script th:src="@{/js/component/component.grm.js}"></script>
+</div>
+
+
+</body>
+</html>

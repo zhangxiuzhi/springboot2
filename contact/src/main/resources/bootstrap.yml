@@ -19,3 +19,8 @@ debug: true
 logging:
   level:
     org.springframework.cloud.sleuth: debug
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream

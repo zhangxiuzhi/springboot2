@@ -1,0 +1,231 @@
+@charset "utf-8";
+
+body,html {
+  height: 100%
+}
+*,:after,:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box; /*Opera9.6*/
+  -ms-box-sizing: border-box; /*IE8*/
+  box-sizing: border-box;
+}
+a{
+  text-decoration:none;
+}
+body{
+  overflow: auto;
+  margin:0;
+  padding:0;
+  width:100%;
+  font-family: 'Helvetica Neue','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft Yahei',sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #383838;
+  background-color: #fff;
+  background:url(/images/banner.png) no-repeat scroll 0 0 / cover;
+  background-attachment: fixed;
+
+}
+
+
+a {
+  color: #03a9f4;
+  cursor: pointer;
+  -webkit-transition: color 218ms cubic-bezier(0.42,0,.58,1);
+  -o-transition: color 218ms cubic-bezier(0.42,0,.58,1);
+  transition: color 218ms cubic-bezier(0.42,0,.58,1)
+}
+
+
+
+@media (max-width:768px) {
+  .banner{
+    background-size: 1920px 1000px;
+  }
+  .banner_button_left {
+    width: 100%;
+  }
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+  .banner{
+    background-size: 1920px 1000px;
+  }
+  .banner_button_left {
+    width: 100%;
+  }
+
+}
+@media (min-width:992px) {
+  .banner{
+    background-size: 1920px 1000px;
+  }
+  .banner_button_left {
+    width: 930px;
+  }
+}
+
+@media (min-width:1200px) {
+  .banner{
+    background-size: 1920px 1000px;
+  }
+  .banner_button_left {
+    width: 1100px;
+  }
+}
+
+@media (min-width:1400px) and (max-width:1499px){
+  .banner{
+    background-size:1920px 1000px;
+  }
+  .banner_button_left {
+    width: 1310px;
+  }
+}
+
+@media (min-width:1500px) {
+  .banner{
+    background-size: cover;
+  }
+  .banner_button_left {
+    width: 1310px;
+  }
+}
+
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+}
+
+
+//页头
+.header-menu{
+  z-index: 222;
+  height: 90px;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  .container{
+    width: 1200px;
+  }
+  /*  float:left; */
+  .logo {
+    float: left;
+    .logo-link{
+      display: block;
+      width: 221px;
+      height: 90px;
+      padding: 0;
+      line-height:90px;
+      color:#383838;
+      font-size:16px;
+      vertical-align: middle;
+      img{
+        width: 260px;
+        margin-top: -10px;
+        margin-left: -40px;
+      }
+    }
+  }
+
+  .menu{
+    float: right;
+    a{
+      display: inline;
+      text-decoration: none;
+      padding: 5px 16px;
+      cursor: pointer;
+      color: white;
+      font-size: 16px;
+      margin: 0 35px;
+      height: 90px;
+      line-height: 90px;
+    }
+    a.user-h{
+      border: 1px solid #fff;
+      border-radius: 4px;
+    }
+  }
+}
+
+
+
+/*大图*/
+.banner{
+  width:100%;
+  position: relative;
+  height: calc(100% - 162px);
+ .intro{
+   position: absolute;
+   width: 800px;
+   left: 50%;
+   top:25%;
+   margin-left: -400px;
+   color:#ffffff;
+   font-family:"微软雅黑";
+   text-align:center;
+   h1{
+     font-size:60px;
+     font-weight:400;
+     line-height: 1.2;
+     margin-top: 0;
+     span{
+       display: inline-block;
+       margin: 0 20px;
+     }
+   }
+  p{
+     line-height: 1.555;
+     font-size: 18px;
+     font-weight:200;
+     margin: 0 0 10px;
+     span{
+       display: inline-block;
+       margin: 0 10px;
+     }
+   }
+   .desc {
+     margin-top: 20px;
+     margin-bottom: 24px;
+     color:#FFFFFF;
+   }
+ }
+  .btn{
+    font-size: 18px;
+    padding: 15px 20px;
+    margin: 0 10px;
+    width: 180px;
+    border-radius:6px;
+    -webkit-box-shadow: 0px 14px 34px -10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 14px 34px -10px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0px 14px 34px -10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 14px 34px -10px rgba(0, 0, 0, 0.3);
+  }
+}
+
+
+
+//页脚
+.footer{
+  display: block;
+  padding: 20px 0 20px;
+  color: #fff;
+  font-size: 12px;
+  .footer_text{
+    text-align:center;
+    color:#a6a6a6;
+    font-size:14px;
+  }
+  .footer_logo{
+    text-align:center;
+    font-size: 14px;
+    color:#a6a6a6;
+    padding:0px;
+    line-height: 12px;
+
+  }
+}

@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/**
+ * Created by WangZhenJia(159109799@qq.com) on 2017/9/6.
+ */
+.react-tree2 {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+  width: 100%; }
+  .react-tree2 ul.nav {
+    /*默认*/
+    /*展开*/
+    /*选中*/ }
+    .react-tree2 ul.nav li.tree-node {
+      height: auto; }
+      .react-tree2 ul.nav li.tree-node a {
+        color: #333;
+        padding: 4px 8px;
+        display: inline-block;
+        cursor: pointer; }
+        .react-tree2 ul.nav li.tree-node a:focus, .react-tree2 ul.nav li.tree-node a:hover {
+          background: transparent; }
+      .react-tree2 ul.nav li.tree-node a.toggleIcon {
+        text-align: center;
+        width: 16px;
+        padding: 4px 0; }
+        .react-tree2 ul.nav li.tree-node a.toggleIcon.hasIcon:before {
+          content: "\f0fe";
+          font-family: "Font Awesome 5 Pro"; }
+      .react-tree2 ul.nav li.tree-node a.nodeText {
+        padding-left: 0;
+        width: calc(100% - 16px - 8px); }
+      .react-tree2 ul.nav li.tree-node > ul {
+        padding: 0 0 0 10px;
+        display: none; }
+    .react-tree2 ul.nav li.toggled > a.toggleIcon.hasIcon:before {
+      content: "\f146";
+      font-weight: normal; }
+    .react-tree2 ul.nav li.toggled > ul {
+      display: block; }
+    .react-tree2 ul.nav li.tree-node.selected > a {
+      background: #ccc; }
+
+/*# sourceMappingURL=Tree2.css.map */

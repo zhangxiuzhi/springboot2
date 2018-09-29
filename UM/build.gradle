@@ -1,0 +1,70 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.4.RELEASE'
+
+    }
+    repositories {
+        maven { url = "http://116.228.222.130:18081/nexus/content/groups/public/" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.brc'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+
+
+repositories {
+    maven { url = "http://116.228.222.130:18081/nexus/content/groups/public/" }
+    mavenCentral()
+    maven { url "https://repo.spring.io/milestone" }
+}
+
+jar {
+    archivesBaseName = 'userManager'
+}
+
+ext {
+    springCloudVersion = 'Finchley.SR1'
+
+}
+
+
+
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+//    runtime('com.h2database:h2')
+    compile('org.springframework.boot:spring-boot-starter-security')
+    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+
+    compile('org.springframework.boot:spring-boot-starter-web')
+
+    compile('org.springframework.cloud:spring-cloud-starter-oauth2')
+
+    compile 'com.alibaba:druid-spring-boot-starter:1.1.10'
+    compile 'com.alibaba:druid:1.1.10'
+
+    runtime('org.springframework.boot:spring-boot-devtools')
+
+    runtime('mysql:mysql-connector-java')
+
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.springframework.security:spring-security-test')
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}

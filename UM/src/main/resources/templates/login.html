@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/frontCode::frontCode}"/>
+
+<body onload='document.f.username.focus();'>
+
+<div class="main-wrapper">
+    <div class="login-wrapper d-flex justify-content-center align-items-center">
+        <form id="myForm" name='f' action='/login' method='POST'>
+            <div class="login-box">
+                <div class="login-logo"><h5>BRC User Manager</h5></div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-horizontal">
+
+                            <div class="input-group margin-bottom-15">
+                                <div class="input-group-addon"><i class="fal fa-user"></i></div>
+                                <input type="text" name='username' class="form-control" placeholder="username"/>
+                            </div>
+
+                            <div class="input-group margin-bottom-15">
+                                <div class="input-group-addon"><i class="fal fa-lock"></i></div>
+                                <input type="password" name='password' class="form-control" placeholder="password"/>
+                            </div>
+
+                            <!--<div class="form-group">-->
+                            <!--<label class="inline-checkbox"><input class="ui-checkbox" type="checkbox"/> remember me</label>-->
+                            <!--</div>-->
+
+                            <div class="button-group text-center">
+                                <button name="submitButton" type="button" onclick="doPost()" class="btn btn-block btn-lg btn-primary">Log in</button>
+                                <input type="hidden" th:name="${_csrf.parameterName}" id="_csrf" th:value="${_csrf.token}"/>
+                            </div>
+                            <div class="margin-top-15 text-danger">
+                                <div th:if="${param.error ne null}">
+                                    <i class="fal fa-info-circle"></i> <span th:text="${session.SPRING_SECURITY_LAST_EXCEPTION.message}"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<link rel="stylesheet" th:href="@{/css/login.css}"/>
+<script>
+    function doPost() {
+        var csrf_parameter = $("meta[name='_csrf_parameter']").attr("content");
+        var csrf = $("meta[name='_csrf']").attr("content");
+
+        $("#_csrf").attr("name", csrf_parameter);
+        $("#_csrf").val(csrf);
+
+        document.getElementById("myForm").submit();
+    }
+
+    $(document).ready(function () {
+        $("#myForm input[name='username']").onEnterDown(function () {
+            $("#myForm input[name='password']").focus();
+        });
+        $("#myForm input[name='password']").onEnterDown(function () {
+            doPost();
+        });
+    })
+
+
+</script>
+</body>
+</html>

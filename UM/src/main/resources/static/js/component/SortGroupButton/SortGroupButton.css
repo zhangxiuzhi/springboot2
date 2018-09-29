@@ -1,0 +1,18 @@
+.react-sortGroupButton .btn-group .btn {
+  padding: 0px 16px;
+  height: 24px;
+  line-height: 24px;
+  background: #fff;
+  border: 1px solid #dfdfdf; }
+.react-sortGroupButton .btn-group .btn > .icon {
+  display: inline-block;
+  margin-left: 5px; }
+
+.wzj-ui.react-sortGroupButton .btn-group .btn.asc {
+  color: green; }
+.wzj-ui.react-sortGroupButton .btn-group .btn.desc {
+  color: red; }
+.wzj-ui.react-sortGroupButton .btn-group .btn.none {
+  color: #666; }
+
+/*# sourceMappingURL=SortGroupButton.css.map */

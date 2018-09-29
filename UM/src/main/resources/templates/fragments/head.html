@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+
+
+<div  th:fragment="preloader" class="page-preloader">
+    <div class="loader-ripple">
+        <div class="ripple-pos"></div>
+        <div class="ripple-pos"></div>
+    </div>
+</div>
+
+<div  th:fragment="topHeader" class="topheader">
+         <div class="navbar top-navbar navbar-expand-md navbar-light">
+             <div class="navbar-header">
+                <div class="navbar-brand"><div class="logo-text">TPS</div></div>
+             </div>
+
+             <div class="navbar-collapse collapse">
+                 <div class="navbar-nav pull-left" id="topheader-breadcrumbs">
+                     <h4 class="page-title"></h4>
+                     <ul class="breadcrumb">
+
+                     </ul>
+                 </div>
+                 <ul class="navbar-nav pull-right">
+                    <li class="nav-item search-box">
+                        <a class="nav-link fs-16"><i class="fal fa-search"></i></a>
+                    </li>
+                </ul>
+             </div>
+         </div>
+    <script language="JavaScript">
+
+            // var _ADD=[[${_ADD}]];//true 有增加的权限
+            // var _DEL=[[${_DEL}]];//true 有删除的权限
+            // var _MOD=[[${_MOD}]];//true 有修改的权限
+
+        </script>
+</div>
+
+
+</body>
+
+</html>

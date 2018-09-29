@@ -1,6 +1,7 @@
 package com.brc.port.web;
 
 import com.brc.port.service.ContactClient;
+import com.brc.port.vo.UserVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,17 @@ public class IndexController {
     public String sayHello(String name){
         logger.info("say Hello {}",name);
         return contactClient.sayHello("张修志"+name);
-//        return "11";
     }
+
+    @RequestMapping("/user")
+    @ResponseBody
+    public UserVo user(String name){
+        logger.info("say Hello {}",name);
+        UserVo userVo = new UserVo();
+        userVo.setUserName(name);
+//        UserVo user = contactClient.user(userVo);
+        return contactClient.user(userVo);
+    }
+
 
 }

@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="font-awesome.css"/>
+<link rel="stylesheet" href="ERP-UI-CSS.css"/>
+<style>
+body{
+	color:#666;
+	font-size:12px;
+}
+.clearfix:before,
+.clearfix:after{
+	content:"";
+	display:table;
+}
+.clearfix:after{
+	clear:both;
+}
+.float-left{
+	float:left;
+}
+.float-right{
+	float:right;
+}
+*{
+	padding:0;
+	margin:0;
+}
+ul,li{
+	list-style-type:none;
+	padding:0;
+	margin:0;
+	
+}
+
+</style>
+</head>
+
+<body>
+<!-----------button------------->
+<button class="ui-btn btn-linear btn-small">线框按钮</button>class="ui-btn btn-linear btn-small"
+<br/>
+<br/>
+<button class="ui-btn btn-linear">线框按钮</button>class="ui-btn btn-linear"
+<br>
+<br>
+<button class="ui-btn btn-white">默认</button>class="ui-btn btn-white"
+<br>
+<br>
+<button class="ui-btn btn-blue">样式1</button>class="ui-btn btn-blue"
+<br>
+<br>
+<button class="ui-btn btn-red">样式2</button>class="ui-btn btn-red"
+<br>
+<!----------input------------->
+<br>
+<input type="text" class="input-default"/> 默认输入框 class="input-default"
+<br/>
+<!----------radio------------->
+<br/>
+<input type="radio" class="radio-default" name="a"/> 默认单选 class="radio-default"
+<br/>
+<input type="radio" class="ui-radio radio-blue" checked name="a"/> 单选样式1 class="ui-radio radio-blue"
+<br/>
+<input type="radio" class="ui-radio radio-green" checked name="a"/> 单选样式2 class="ui-radio radio-green"
+<br/>
+<input type="radio" class="radio-disabled" disabled/> 禁用单选 class="radio-disabled"
+<br/>
+<!----------checkbox------------->
+<br/>
+<input type="checkbox" class="ui-checkbox checkbox-blue" checked/>复选样式1 class="ui-checkbox checkbox-blue"
+<br/>
+<input type="checkbox" class="ui-checkbox checkbox-green" checked/>复选样式2 class="ui-checkbox checkbox-green"
+<br/>
+<input type="checkbox" class="checkbox-default" checked/>默认复选 class="checkbox-default"
+<br/>
+<!----------dropdown------------->
+<br/>
+<select class="ui-dropdown">
+	<option>选项1</option>
+    <option>选项2</option>
+    <option>选项3</option>
+</select>下拉框  class="ui-dropdown"
+<br/>
+<!----------tab------------->
+<br/>
+<div class="tab">
+    <div class="tab-bottom">
+    <a href="#" class="tab-bottom selected" >tab1</a>
+    <a href="#" >tab2</a>
+    <a href="#" >tab3</a>
+    <a href="#" >tab4</a>
+    </div>
+</div>
+<br/>
+<!-----------modal------------->
+<br/>
+<div class="modal-mask">
+    <div class="modal" style="width:400px; margin:0 auto">
+        <div class="modal-head" >
+            标题
+        </div>
+        <div class="modal-body" >
+            正文
+        </div>
+        <div class="modal-foot" >
+        <button class="ui-btn btn-white">取消</button>
+        <button class="ui-btn btn-blue">确认</button>
+        </div>	
+    </div>
+</div>
+<br/>
+<!----------paging------------->
+<br/><br/>
+<div class="paging clearfix">
+	<div class="paging-pagination float-left">
+        显示
+        <select class="paging-dropdown">
+        <option>10</option>
+        <option>15</option>
+        <option>20</option>
+        </select>
+        条/页
+    </div>
+    <div class="float-right clearfix">
+        <div class="paging-link float-left">
+            <a href="#" class="num fa fa-angle-double-left "></a>
+            <a href="#" class="num selected">1</a>
+            <a href="#" class="num">2</a>
+            <a href="#" class="num">3</a>
+            <a href="#" class="num">4</a>
+            <a href="#" class="num">5</a>
+            <a href="#" class="num fa fa-angle-double-right"></a>
+        </div>
+        
+        <div class="paging-redirect float-left">
+            跳至
+            <input type="text" class="input-default paging-input"/>
+            页
+        </div>
+     </div>
+</div>
+<br/><br/>
+<!----------------table-------------->
+ <table width="100%" border="0" class="table">
+        <thead>
+                <tr>
+                  <th><input type="checkbox"/></th>
+                  <th>操作</th>
+                  <th>合约号</th>
+                  <th>供货单位</th>
+                  <th>载重1</th>
+                  <th>货物2</th>
+                  <th>载重2</th>
+                  <th>ETA</th>
+                  <th>ETB</th>
+                  <th>ETD</th>
+                </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td><input type="checkbox"/></td>
+                    <td>
+                    <a href="" class="ui-link-icon fal fa-pencil-alt"></a>
+                    <a href="" class="ui-link-icon far fa-eye"></a>
+                    <a href="" class="ui-link-icon far fa-trash-alt"></a>
+                    </td>
+                    <td><a href="" class="ui-link">GP0020161205</a></td>
+                    <td>text1</td>
+                    <td>160000</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>2016-09-26</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"/></td>
+                    <td>
+                    <a href="" class="ui-link-icon fal fa-pencil-alt"></a>
+                    <a href="" class="ui-link-icon far fa-eye"></a>
+                    <a href="" class="ui-link-icon far fa-trash-alt"></a>
+                    </td>
+                    <td><a href="" class="ui-link">GP0020161205</a></td>
+                    <td>text1</td>
+                    <td>160000</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>2016-09-26</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+        </tbody>
+</table>
+
+</body>
+</html>

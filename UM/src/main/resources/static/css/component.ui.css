@@ -1,0 +1,677 @@
+@charset "UTF-8";
+/*--------------------------------
+变量
+-----------------------------------------*/
+/*-------------------------------------------------
+数据展示表格
+-------------------------------------------------*/
+/*当点击表格中某个条目时，为该条目添加高亮显示。该效果会被hover覆盖。*/
+.selected-highlight td{
+	background: #ebf2f9 !important;
+}
+
+/*
+.table {
+  border-collapse: collapse !important;
+  border-spacing: 0;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  font-size:12px;
+  width: 100%;
+
+  > thead > tr > th,
+  > tfoot > tr > th,
+  > tfoot > tr > th,
+  > thead > tr > th {
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+  }
+
+  > tbody > tr > td,
+  > tbody > tr > th,
+  > tfoot > tr > td,
+  > tfoot > tr > th,
+  > thead > tr > td,
+  > thead > tr > th {
+    padding: 12px 15px;
+    padding:12px 8px;
+    vertical-align: middle;
+    border-top: 1px solid #ddd;
+    background:#fff;
+    text-align:left;
+  }
+
+  > tbody + tbody {
+    border-top: 1px solid #ddd;
+  }
+  > thead > tr > th{background:none;}
+  > tbody > tr > th{background:#f6f6f6;}
+
+  !*striped*!
+  &.table-striped>tbody>tr:nth-child(odd)>td,
+  &.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #f9f9f9;
+  }
+
+  !*border*!
+  &.table-bordered,
+  &.table-bordered > tbody > tr > td,
+  &.table-bordered > tbody > tr > th,
+  &.table-bordered > tfoot > tr > td,
+  &.table-bordered > tfoot > tr > th,
+  &.table-bordered > thead > tr > td,
+  &.table-bordered > thead > tr > th {
+    border: 1px solid #ddd;
+  }
+}*/
+/*.table-bordered-nowarp {
+  border: none;
+}*/
+/*hover*/
+/*.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+  background-color: #eaf5fa;
+}
+.table tbody td:focus{
+  outline:none;
+}
+.table td.react-bs-table-no-data{
+  text-align: center !important;
+}*/
+/*.table .filter.text-filter{
+  display:none;
+}
+.react-bs-table{
+  border-radius:0;
+  margin:0;
+}*/
+/*.table.orderTable{
+  border:none;
+  margin-bottom:20px;
+
+  > thead > tr > th{
+    background:#f5f5f5;
+    border-top:1px solid #e8e8e8 !important;
+    border-bottom:1px solid #e8e8e8 !important;
+    text-align:center;
+
+    &:first-child {
+      border-left: 1px solid #e8e8e8;
+    }
+    &:last-child {
+      border-right: 1px solid #e8e8e8;
+    }
+  }
+  > tbody > tr > td {
+    border: none;
+    border-bottom: 1px solid #DCDCDC;
+    text-align: center;
+    color:#666;
+    &:first-child {
+      border-left: 1px solid #DCDCDC;
+    }
+    &:last-child {
+      border-right: 1px solid #DCDCDC;
+    }
+
+    !*纵向合并的单元格*!
+   &[rowspan]{
+      border-left:1px solid #DCDCDC;
+    }
+  }
+
+
+  !*作为间隔用，去边框*!
+  > tbody > tr.sep-row >td{
+    border:none;
+    padding:8px 0;
+  }
+  !*自定义的标题*!
+  > tbody > tr.tr-th >td{
+    background:#CEECFF;
+    color:#aaa;
+    border:1px solid #DCDCDC;
+  }
+  > tbody > tr.normal-row >td{
+    border-top:1px solid #e8e8e8;
+    border-bottom:1px solid #e8e8e8;
+
+    &:first-child{
+      border-left:1px solid #e8e8e8;
+    }
+    &:last-child{
+      border-right:1px solid #e8e8e8;
+    }
+  }
+  !*含有子数据时的数据行*!
+  > tbody >tr.child-row >td{
+    background: #fff;
+  }
+  !*无数据时显示*!
+  > tbody.nodata-tbody,
+  > tbody.nodata-tbody+tbody{
+    border:none;
+  }
+  > tbody >tr.nodata-row>td,
+  > tbody >tr.loading-row>td{
+    border:1px solid #e8e8e8;
+    padding:120px 0;
+    color:#999;
+    background: #fff;
+  }
+  > tbody >tr.nodata-row>td{
+    background: #fff;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    &:before{
+      content: "\f05a";
+      margin-right: 5px;
+      font-size: 16px;
+      color: $color-label;
+    }
+  }
+  !*过期或完成的数据行*!
+  >tbody.tbody-outOfDate {
+    >tr >td{
+      border-color: #e8e8e8;
+    }
+    >tr.tr-th >td{
+      background:#f5f5f5;
+    }
+
+  }
+
+}*/
+/*分页按钮*/
+/*.orderTable-pagination {
+  margin: 5px -10px  20px;
+
+  .pagination {
+    margin: 0;
+  }
+  .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: $color-theme;
+    border-color: $color-theme;
+    color:#fff;
+  }
+  .pagination > li > a, .pagination > li > span {
+    color: #666;
+    margin-left: 3px;
+    padding: 0 12px;
+    height: 24px;
+    line-height: 22px;
+  }
+  .pagination > li:first-child > a, .pagination > li:first-child > span,
+  .pagination > li:last-child > a, .pagination > li:last-child > span {
+    border-radius: 0;
+  }
+  .pagination > li > a:hover {
+    background: #fff;
+    color: $color-theme;
+    border-color: $color-theme;
+  }
+  .dropdown{
+    .btn{border-radius:0;background:#fff; padding:0 12px;}
+  }
+  .dropdown {
+    .btn.btn-default.dropdown-toggle{
+      border:1px solid #ddd
+    }
+    .dropdown-menu>li>a:hover{
+      background: $color-gray-5;
+    }
+  }
+}
+.react-bs-table-pagination{margin:0;}*/
+/*-------------------------------------------------
+vertical-menu
+-------------------------------------------------*/
+.vertical-menu {
+  width: 100%;
+  border: 0px solid #e5e5e5;
+  font-size: 12px; }
+  .vertical-menu .menu-caption {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 6px 0px;
+    border-bottom: 0px solid #e5e5e5;
+    height: 34px; }
+  .vertical-menu .menu-wrap {
+    padding: 6px 0px; }
+  .vertical-menu .menu-items {
+    margin: 5px 0;
+    color: #999;
+    cursor: pointer;
+    margin-bottom: 0px;
+    /*父级*/
+    /*子级*/ }
+    .vertical-menu .menu-items .parent {
+      font-size: 14px;
+      font-weight: bold;
+      color: #333; }
+    .vertical-menu .menu-items .child .item-name {
+      margin: 0px 0;
+      padding: 0 0 0 20px;
+      line-height: 30px; }
+    .vertical-menu .menu-items .child .item-name.selected {
+      font-weight: bold;
+      color: #fff;
+      padding: 0 20px;
+      line-height: 30px;
+      /*background: $color-theme;*/
+      color: #de211d; }
+    .vertical-menu .menu-items .child .item-name > a {
+      color: #999; }
+    .vertical-menu .menu-items .child .item-name > a:hover,
+    .vertical-menu .menu-items .child .item-name.selected > a {
+      color: #de211d; }
+
+/*-------------------------------------------------
+tabs-menu
+-------------------------------------------------*/
+.tabs-menu .nav-tabs > li.active > a,
+.tabs-menu .nav-tabs > li.active > a:hover,
+.tabs-menu .nav-tabs > li.active > a:focus {
+  color: #de211d;
+  font-weight: bold;
+  background-color: #fff;
+  border: none;
+  border-bottom: 3px solid #de211d;
+  cursor: default; }
+.tabs-menu .nav-tabs > li > a {
+  border: none;
+  color: #666; }
+  .tabs-menu .nav-tabs > li > a:hover {
+    background: none;
+    border: none;
+    color: #de211d; }
+.tabs-menu .tab-content {
+  padding: 10px 0; }
+
+/*-------------------------------------------------
+详情表格浏览
+-------------------------------------------------*/
+.preview-table {
+  border-collapse: collapse;
+  border: 1px solid #DDDDDD;
+  margin: 0 0 15px; }
+  .preview-table th,
+  .preview-table td {
+    padding: 16px;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD; }
+  .preview-table th {
+    background: #fff;
+    min-width: 100px; }
+
+/*-------------------------------------------------
+时间线
+-------------------------------------------------*/
+.timeline .timeline-caption {
+  font-size: 14px;
+  text-align: center;
+  padding: 0 10px;
+  line-height: 30px;
+  background: #ddd;
+  width: 200px;
+  margin: 0 auto 30px;
+  border-radius: 2px; }
+.timeline .timeline-axes {
+  position: relative; }
+.timeline .timeline-caption:before,
+.timeline .timeline-axes:before {
+  content: "";
+  position: absolute;
+  background: #ddd;
+  width: 4px;
+  height: 100%;
+  left: 50%;
+  margin-left: -2px;
+  z-index: 3; }
+.timeline .timeline-caption:before {
+  top: 30px; }
+.timeline .timeline-point {
+  padding: 0 0px;
+  margin-bottom: 60px;
+  height: 25px;
+  line-height: 25px;
+  position: relative;
+  z-index: 4; }
+.timeline .timeline-point.left-point {
+  margin-right: 50%;
+  text-align: right; }
+  .timeline .timeline-point.left-point > .point-target {
+    float: right;
+    margin-right: 20px;
+    background: url(../images/timeline-buyer.png) 0 0;
+    padding-right: 10px; }
+  .timeline .timeline-point.left-point > .point-node {
+    right: -5px; }
+  .timeline .timeline-point.left-point > .point-event {
+    color: #45a9e9; }
+  .timeline .timeline-point.left-point > .point-time {
+    border-color: #45a9e9; }
+    .timeline .timeline-point.left-point > .point-time:before {
+      border-bottom: 5px solid #45a9e9;
+      border-left: 5px solid #45a9e9; }
+.timeline .timeline-point.right-point {
+  margin-left: 50%;
+  text-align: left; }
+  .timeline .timeline-point.right-point > .point-target {
+    float: left;
+    margin-left: 20px;
+    background: url(../images/timeline-saler.png) 0 0;
+    padding-left: 10px; }
+  .timeline .timeline-point.right-point > .point-node {
+    left: -7px;
+    border-color: #d58e42; }
+  .timeline .timeline-point.right-point > .point-event {
+    color: #d58e42; }
+  .timeline .timeline-point.right-point > .point-time {
+    border-color: #d58e42; }
+    .timeline .timeline-point.right-point > .point-time:before {
+      border-bottom: 5px solid #d58e42;
+      border-right: 5px solid #d58e42; }
+.timeline .point-node {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid #45a9e9;
+  text-align: center;
+  background: #fff;
+  position: absolute;
+  top: 18px; }
+.timeline .point-target {
+  position: relative;
+  content: "";
+  width: 63px;
+  height: 52px;
+  text-align: center;
+  line-height: 50px;
+  background: #fff; }
+.timeline .point-event {
+  font-size: 14px;
+  color: #de211d;
+  text-align: center;
+  padding-left: 15px; }
+.timeline .point-time {
+  border-top: 2px solid #de211d;
+  text-align: left;
+  padding-left: 15px;
+  color: #999; }
+.timeline .point-time:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 0;
+  bottom: 0;
+  background: #de211d;
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+  border-bottom: 5px solid #de211d;
+  border-left: 5px solid #de211d; }
+.timeline .right-point .point-time:before {
+  right: 0;
+  left: initial;
+  border-top: 5px solid #fff;
+  border-right: 5px solid #de211d;
+  border-bottom: 5px solid #de211d;
+  border-left: 5px solid #fff; }
+.timeline .right-point .point-event,
+.timeline .right-point .point-time {
+  text-align: right;
+  padding-right: 15px; }
+
+/*-------------------------------------------------
+dropdownlist
+-------------------------------------------------*/
+.dropdownlist {
+  display: inline-block;
+  vertical-align: middle;
+  background: #fff;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  height: 30px;
+  font-size: 12px;
+  min-width: 60px; }
+  .dropdownlist .input-group,
+  .dropdownlist .dropdown {
+    display: inline-table;
+    vertical-align: middle;
+    width: 100%; }
+  .dropdownlist input[type=text] {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    display: none; }
+  .dropdownlist .dropdown .btn.btn-default {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 0px;
+    border: none; }
+    .dropdownlist .dropdown .btn.btn-default:hover {
+      background: #20b0de;
+      color: #fff; }
+    .dropdownlist .dropdown .btn.btn-default .text-g {
+      float: left; }
+    .dropdownlist .dropdown .btn.btn-default .caret {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: 2px;
+      vertical-align: middle;
+      border-top: 4px dashed;
+      border-top: 4px solid \9;
+      border-right: 4px solid transparent;
+      border-left: 4px solid transparent; }
+  .dropdownlist .dropdown-menu {
+    width: 100%;
+    max-height: 220px;
+    overflow-y: auto; }
+    .dropdownlist .dropdown-menu li > a {
+      padding: 6px 12px;
+      background: #fff; }
+    .dropdownlist .dropdown-menu li:hover > a,
+    .dropdownlist .dropdown-menu li.selected > a {
+      background: #20b0de;
+      color: #fff; }
+
+/*-------------------------------------------------
+InputGroup
+-------------------------------------------------*/
+.component-InputGroup {
+  min-height: 42px; }
+
+.component-InputGroupSelect {
+  /*自适应高度的多选*/ }
+  .component-InputGroupSelect .input-group-btn:last-child > .btn, .component-InputGroupSelect .input-group-btn:last-child > .btn-group {
+    margin: 0; }
+  .component-InputGroupSelect .input-group-btn:last-child > .btn + .btn {
+    border-left: 1px solid #ccc; }
+  .component-InputGroupSelect .select2-container--default .select2-selection--single {
+    border: none;
+    height: 42px; }
+    .component-InputGroupSelect .select2-container--default .select2-selection--single .select2-selection__rendered {
+      font-size: 14px;
+      line-height: 32px;
+      background-color: #20b0de;
+      color: #fff;
+      border: 1px solid #20b0de;
+      border-radius: 2px;
+      cursor: default;
+      float: right;
+      margin-right: 5px;
+      margin-top: 5px;
+      padding: 0 12px; }
+    .component-InputGroupSelect .select2-container--default .select2-selection--single .select2-selection__arrow {
+      display: none; }
+  .component-InputGroupSelect .select2-container--default .select2-selection--multiple {
+    border: none;
+    height: 42px;
+    height: auto; }
+    .component-InputGroupSelect .select2-container--default .select2-selection--multiple .select2-selection__rendered {
+      line-height: 32px; }
+  .component-InputGroupSelect .select2-container--open .select2-dropdown--below {
+    margin-top: 1px;
+    border-radius: 0; }
+  .component-InputGroupSelect .select2-container--open .select2-dropdown--above {
+    margin-top: -1px;
+    border-radius: 0; }
+  .component-InputGroupSelect .select2-container--default .select2-selection--multiple .select2-selection__rendered .select2-selection__choice {
+    background-color: #20b0de;
+    color: #fff;
+    border: 1px solid #20b0de;
+    border-radius: 2px;
+    cursor: default;
+    float: right;
+    padding: 0 12px; }
+  .component-InputGroupSelect .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #fff; }
+  .component-InputGroupSelect .select2-hidden-accessible {
+    height: 42px !important; }
+  .component-InputGroupSelect.autoHeight .select2-container--default .select2-selection--multiple {
+    height: auto; }
+
+/*-------------------------------------------------
+adioBoxGroup
+单选过滤组
+-------------------------------------------------*/
+.react-radioBox.TagStyle label {
+  font-size: 14px;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 4px;
+  position: relative;
+  border: 1px solid #f6f6f6;
+  font-weight: normal;
+  color: #5e5e5e; }
+.react-radioBox.TagStyle .radio {
+  border: none;
+  width: auto;
+  height: auto;
+  display: none; }
+.react-radioBox.TagStyle .checked .radio {
+  border: none !important;
+  display: none; }
+.react-radioBox.TagStyle .checked label {
+  color: #de211d;
+  border: 1px solid #de211d;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px; }
+
+/*-------------------------------------------------
+sortGroupButton
+排序按钮组
+-------------------------------------------------*/
+.react-sortGroupButton .btn-group > .btn > .icon {
+  width: 9px;
+  height: 9px; }
+.react-sortGroupButton .btn-group > .btn > .icon.asc {
+  background: url(../images/trade-option.png) 0 0 no-repeat; }
+.react-sortGroupButton .btn-group > .btn > .icon.desc {
+  background: url(../images/trade-option.png) 0 -9px no-repeat; }
+.react-sortGroupButton .btn-group > .btn > .icon.none {
+  display: none; }
+
+/*-------------------------------------------------
+react-selectbox
+下拉框
+-------------------------------------------------*/
+/*-------------------------------------------------
+react-toggle
+开关
+-------------------------------------------------*/
+.react-toggle--checked .toggle-track {
+  background-color: #de211d; }
+
+/*-------------------------------------------------
+react-multiSelect
+白名单
+-------------------------------------------------*/
+.react-multiSelect {
+  position: relative; }
+  .react-multiSelect .react-ms-left,
+  .react-multiSelect .react-ms-right {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(56% - 100px);
+    height: 100%; }
+  .react-multiSelect .react-ms-left {
+    left: auto;
+    right: 0; }
+  .react-multiSelect .react-ms-top-text,
+  .react-multiSelect .react-ms-top-input {
+    width: 100%;
+    margin-bottom: 5px; }
+  .react-multiSelect .react-ms-top-text {
+    border: none;
+    background: #53a6fa;
+    color: #fff;
+    border-radius: 0; }
+  .react-multiSelect .react-ms-btns {
+    position: absolute;
+    left: calc(56% - 100px);
+    top: 50%;
+    margin-top: -80px;
+    width: 90px;
+    line-height: 25px;
+    text-align: center; }
+    .react-multiSelect .react-ms-btns button {
+      margin: 0px auto;
+      font-size: 18px;
+      width: 50px;
+      height: 40px;
+      text-align: center;
+      padding: 6px 0;
+      display: block;
+      border: none; }
+  .react-multiSelect .react-msl, .react-multiSelect .react-mspxr {
+    border: 1px solid #e4e4e4;
+    width: 100%;
+    height: 100%; }
+    .react-multiSelect .react-msl option, .react-multiSelect .react-mspxr option {
+      cursor: pointer;
+      padding: 6px 10px;
+      border-bottom: 1px solid #eee; }
+    .react-multiSelect .react-msl option:hover, .react-multiSelect .react-mspxr option:hover {
+      background: rgba(79, 189, 233, 0.2); }
+  .react-multiSelect .react-msr {
+    border: 1px solid #e4e4e4;
+    width: 100%;
+    height: 100%; }
+    .react-multiSelect .react-msr option {
+      cursor: pointer;
+      padding: 6px 10px;
+      border-bottom: 1px solid #eee; }
+    .react-multiSelect .react-msr option:hover {
+      background: rgba(79, 189, 233, 0.2); }
+  .react-multiSelect .react-ms-top .react-ms-top-text.allMember {
+    /* background: #518BFF;
+     border-radius: 3px;
+     color: #fff;
+     text-align: center;*/
+    line-height: 28px; }
+
+/*-------------------------------------------------
+tree
+树型
+-------------------------------------------------*/
+.react-tree.ui-tree {
+  font-size: 14px; }
+  .react-tree.ui-tree ul.nav > li.tree-node.parentNode > a > i.toggleIcon {
+    transform: none; }
+    .react-tree.ui-tree ul.nav > li.tree-node.parentNode > a > i.toggleIcon:before {
+      content: "\f196";
+      font-family: FontAwesome;
+      font-size: 14px; }
+  .react-tree.ui-tree ul.nav > li.tree-node.parentNode.toggled > a > i.toggleIcon:before {
+    content: "\f147"; }
+
+/*# sourceMappingURL=component.ui.css.map */

@@ -1,0 +1,65 @@
+/**
+ * Created by WangZhenJia(159109799@qq.com) on 2017/9/6.
+ */
+.react-tree2 {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+  width:100%;
+
+
+  ul.nav{
+    /*默认*/
+    li.tree-node {
+      height:auto;
+      a {
+        color: #333;
+        padding: 4px 8px;
+        display: inline-block;
+        cursor: pointer;
+        &:focus,&:hover{background: transparent;}
+      }
+      a.toggleIcon {
+        text-align: center;
+        width: 16px;
+        padding: 4px 0;
+
+        &.hasIcon:before {
+          content: "\f0fe";
+          font-family: "Font Awesome 5 Pro";
+        }
+      }
+      a.nodeText{
+        padding-left:0;
+        width: calc(100% - 16px - 8px);
+      }
+      > ul {
+        padding: 0 0 0 10px;
+        display: none;
+      }
+    }
+
+    /*展开*/
+    li.toggled{
+      > a.toggleIcon{
+        &.hasIcon:before{
+          content:"\f146";
+          font-weight: normal;
+        }
+      }
+      > ul {
+        display: block;
+      }
+    }
+
+    /*选中*/
+    li.tree-node.selected{
+
+      >a{background: #ccc;}
+    }
+  }
+
+
+}
+
